@@ -121,3 +121,21 @@ function set(value: any): any {
 
     return toReturn;
 }
+
+export function promiseFsReadFile(file: string) {
+    return new Promise((resolve, reject) => {
+        fs.readFile(file, (err, res) => {
+            if (err) return reject(err);
+            return resolve(res)
+        })
+    })
+}
+
+export function promiseFsWriteFile(file: string, text: string) {
+    return new Promise((resolve, reject) => {
+        fs.writeFile(file, text, (res, err) => {
+            if (err) return reject(err);
+            return resolve(res)
+        })
+    })
+}
