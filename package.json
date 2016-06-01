@@ -1,0 +1,16 @@
+{
+  "name": "ui-gen",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "ui": "./index.js"
+  },
+  "author": "Filip Lauc <filip.lauc93@gmail.com> (https://github.com/flauc)",
+  "license": "MIT",
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-mkdirp": "^0.1.0",
+    "co-prompt": "^1.0.0"
+  }
+}
