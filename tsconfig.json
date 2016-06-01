@@ -9,6 +9,10 @@
   },
   "files": [
     "index.ts",
-    "typings/main.d.ts"
+    "typings/main.d.ts",
+    "generate/generate.ts",
+    "generate/items.ts",
+    "helpers/filer.ts",
+    "helpers/helpers.ts"
   ]
 }

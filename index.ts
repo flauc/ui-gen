@@ -6,7 +6,6 @@ const args = process.argv.slice(2);
 
 // Handling functions
 function handleErr(err): void {
-    console.error('error: ', err);
     console.error(chalk.red(`error: ${err}`));
     process.exit(0)
 }
@@ -19,7 +18,7 @@ function handleRes(res): void {
 function onCall(args: string[]): void {
 
     switch (args[0]) {
-        case 'c':
+        case 'g':
         case 'generate':
 
             let location = args.indexOf('-l') > -1 || args.indexOf('-location'),
@@ -46,3 +45,5 @@ function onCall(args: string[]): void {
             break;
     }
 }
+
+onCall(args);
