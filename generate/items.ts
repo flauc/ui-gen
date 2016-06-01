@@ -1,11 +1,24 @@
 export const items = {
-    headers: {
-        1: `
-            <div>Header 1</div>
-        `,
+    header: {
 
-        2: `
-            <div>Header 2</div>
-        `
+        fileName: 'header',
+
+        types: {
+            1: {
+                css: `.bla {
+                background: red;
+                color: green;
+            }`,
+                html: `<p class="bla">Header 1</p>`
+            },
+
+            2: {
+                css: `.bla {
+                background: red;
+                color: green;
+            }`,
+                html: `<p class="bla">Header 1</p>`
+            }
+        }
     }
 };
