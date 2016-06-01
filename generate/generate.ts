@@ -27,7 +27,6 @@ export default function generate(item: string, type: number, doInject: boolean, 
                 let data;
 
                 try {
-                    console.log(location);
                     data = yield promiseFsReadFile(location)
                 } catch (err) {
                     throw err;
@@ -37,8 +36,6 @@ export default function generate(item: string, type: number, doInject: boolean, 
                 data.splice(lineNumber, 0, items[item].types[type].html);
                 
                 let full = data.join('\n');
-
-                console.log(full);
 
                 return yield promiseFsWriteFile(location, full)
             })

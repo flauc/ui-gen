@@ -43,15 +43,12 @@ function onCall(args: string[]): void {
 
             if (!validItem) return handleErr('That item was not recognised.');
             
-            let type = args.indexOf('-t') > 1 || args.indexOf('-type') > -1,
-                typeIndex,
-                typeNumber;
+            let type = args.indexOf('-t') > -1 ? args.indexOf('-t') : args.indexOf('-type') > -1 ? args.indexOf('-type') : null,
+                typeIndex = 1;
 
-            if (type) typeIndex = args.indexOf('-t') || args.indexOf('-type');
-            
-            typeNumber = args[typeIndex + 1];
+            if (type) typeIndex = parseInt(args[type + 1]);
 
-            generate(args[1], type ? typeNumber : 1, doInject, lineNumber, location)
+            generate(args[1], typeIndex, doInject, lineNumber, location)
                 .catch(err => handleErr(err))
                 .then(val => handleRes(val));
 

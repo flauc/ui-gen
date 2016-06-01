@@ -23,7 +23,7 @@ export const items = {
                     }
                 `,
 
-                html: `<p class="bla">Header 1</p>`
+                html: `<p class="bla">Header 2</p>`
             }
         }
     }
